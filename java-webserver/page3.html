@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Контакты | Java Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">Java<span>Dev</span></a>
+            <div class="nav-links">
+                <a href="/"><i class="fas fa-home"></i> Главная</a>
+                <a href="/projects"><i class="fas fa-code"></i> Проекты</a>
+                <a href="/contact" class="active"><i class="fas fa-envelope"></i> Контакты</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="contact-header">
+        <div class="container">
+            <h1><i class="fas fa-paper-plane"></i> Свяжитесь со мной</h1>
+            <p>Есть вопросы или предложения? Напишите мне!</p>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Информация -->
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Адрес</h3>
+                        <p>Казахстан, Астана</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>dias@example.com</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Телефон</h3>
+                        <p>+7 700 000 00 00</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <h3>GitHub</h3>
+                        <p>github.com/javadev</p>
+                    </div>
+                </div>
+
+                <!-- Форма -->
+                <div class="contact-form">
+                    <form id="messageForm">
+                        <div class="form-group">
+                            <label for="name">
+                                <i class="fas fa-user"></i> Ваше имя
+                            </label>
+                            <input type="text" id="name" name="name" required 
+                                   placeholder="Введите ваше имя">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">
+                                <i class="fas fa-envelope"></i> Email
+                            </label>
+                            <input type="email" id="email" name="email" required 
+                                   placeholder="your@email.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">
+                                <i class="fas fa-tag"></i> Тема
+                            </label>
+                            <select id="subject" name="subject">
+                                <option value="work">Предложение о работе</option>
+                                <option value="project">Совместный проект</option>
+                                <option value="question">Вопрос по Java</option>
+                                <option value="other">Другое</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">
+                                <i class="fas fa-comment"></i> Сообщение
+                            </label>
+                            <textarea id="message" name="message" rows="6" required 
+                                      placeholder="Напишите ваше сообщение..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox">
+                                <input type="checkbox" required>
+                                <span>Я согласен на обработку данных</span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" id="submitBtn">
+                            <i class="fas fa-paper-plane"></i> Отправить сообщение
+                        </button>
+                        
+                        <div id="formStatus"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Карта (заглушка) -->
+    <section class="map">
+        <div class="container">
+            <h2><i class="fas fa-map"></i> На карте</h2>
+            <div class="map-placeholder">
+                <div class="map-point">
+                    <i class="fas fa-map-pin"></i>
+                </div>
+                <p>Москва, Россия</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Часто задаваемые вопросы -->
+    <section class="faq">
+        <div class="container">
+            <h2><i class="fas fa-question-circle"></i> Частые вопросы</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Сколько времени займет ответ?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Обычно отвечаю в течение 24 часов в рабочие дни.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Вы работаете удаленно?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Да, доступен для удаленной работы и сотрудничества.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Какие технологии используете?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Java, Spring Boot, PostgreSQL, Docker, REST API.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Java Developer Portfolio</p>
+            <div class="social">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

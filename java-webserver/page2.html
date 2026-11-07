@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Мои проекты | Java Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">Java<span>Dev</span></a>
+            <div class="nav-links">
+                <a href="/"><i class="fas fa-home"></i> Главная</a>
+                <a href="/projects" class="active"><i class="fas fa-code"></i> Проекты</a>
+                <a href="/contact"><i class="fas fa-envelope"></i> Контакты</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="projects-header">
+        <div class="container">
+            <h1><i class="fas fa-rocket"></i> Мои проекты</h1>
+            <p>Интерактивная галерея моих работ на Java</p>
+        </div>
+    </section>
+
+    <section class="projects">
+        <div class="container">
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="java">Java</button>
+                <button class="filter-btn" data-filter="web">Веб</button>
+                <button class="filter-btn" data-filter="api">API</button>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card" data-category="java web">
+                    <div class="project-image">
+                        <div class="tech-tags">
+                            <span class="tag java">Java</span>
+                            <span class="tag http">HTTP</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Веб-сервер на Java</h3>
+                        <p>Полноценный HTTP сервер с поддержкой статических файлов, API и WebSocket</p>
+                        <div class="project-features">
+                            <span><i class="fas fa-check"></i> Многопоточность</span>
+                            <span><i class="fas fa-check"></i> REST API</span>
+                            <span><i class="fas fa-check"></i> Кэширование</span>
+                        </div>
+                        <button class="btn btn-small view-details">Подробнее</button>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="java api">
+                    <div class="project-image">
+                        <div class="tech-tags">
+                            <span class="tag spring">Spring</span>
+                            <span class="tag api">REST</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>API для блога</h3>
+                        <p>REST API для блога с аутентификацией и комментариями</p>
+                        <div class="project-features">
+                            <span><i class="fas fa-check"></i> JWT токены</span>
+                            <span><i class="fas fa-check"></i> Пагинация</span>
+                            <span><i class="fas fa-check"></i> Поиск</span>
+                        </div>
+                        <button class="btn btn-small view-details">Подробнее</button>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <div class="tech-tags">
+                            <span class="tag html">HTML5</span>
+                            <span class="tag css">CSS3</span>
+                            <span class="tag js">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Портфолио сайт</h3>
+                        <p>Адаптивный сайт-портфолио с темной темой и анимациями</p>
+                        <div class="project-features">
+                            <span><i class="fas fa-check"></i> Адаптивность</span>
+                            <span><i class="fas fa-check"></i> Анимации</span>
+                            <span><i class="fas fa-check"></i> Темная тема</span>
+                        </div>
+                        <button class="btn btn-small view-details">Подробнее</button>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="java">
+                    <div class="project-image">
+                        <div class="tech-tags">
+                            <span class="tag java">Java</span>
+                            <span class="tag socket">WebSocket</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Чат на WebSocket</h3>
+                        <p>Реал-тайм чат с комнатами и историей сообщений</p>
+                        <div class="project-features">
+                            <span><i class="fas fa-check"></i> WebSocket</span>
+                            <span><i class="fas fa-check"></i> Комнаты</span>
+                            <span><i class="fas fa-check"></i> История</span>
+                        </div>
+                        <button class="btn btn-small view-details">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Java Developer Portfolio</p>
+            <a href="/" class="btn btn-outline">
+                <i class="fas fa-arrow-left"></i> На главную
+            </a>
+        </div>
+    </footer>
+
+    <!-- Модальное окно -->
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modalTitle">Название проекта</h2>
+            <div id="modalContent">
+                <!-- Динамический контент -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
